@@ -12,10 +12,13 @@
 		45967712287CBCB800966C27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45967710287CBCB800966C27 /* Main.storyboard */; };
 		45967714287CBCBD00966C27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45967713287CBCBD00966C27 /* Assets.xcassets */; };
 		45967717287CBCBD00966C27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45967715287CBCBD00966C27 /* LaunchScreen.storyboard */; };
-		45967723287CE51B00966C27 /* ShoeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45967721287CE51B00966C27 /* ShoeCell.swift */; };
-		45967724287CE51C00966C27 /* ShoeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45967722287CE51B00966C27 /* ShoeCell.xib */; };
 		459AF4B02895CFEF0008DB33 /* ProductListCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459AF4AF2895CFEF0008DB33 /* ProductListCollectionViewController.swift */; };
 		459AF4B228970D5E0008DB33 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459AF4B128970D5E0008DB33 /* CollectionViewCell.swift */; };
+		459AF4B4289719500008DB33 /* Shoe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459AF4B3289719500008DB33 /* Shoe.swift */; };
+		459AF4B8289798060008DB33 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459AF4B7289798060008DB33 /* Color.swift */; };
+		459AF4BB2897994D0008DB33 /* Brand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459AF4BA2897994D0008DB33 /* Brand.swift */; };
+		459AF4BD289799DA0008DB33 /* PriceRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459AF4BC289799DA0008DB33 /* PriceRange.swift */; };
+		459AF4BF289854000008DB33 /* ShoeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459AF4BE289854000008DB33 /* ShoeType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,10 +29,13 @@
 		45967713287CBCBD00966C27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		45967716287CBCBD00966C27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		45967718287CBCBD00966C27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		45967721287CE51B00966C27 /* ShoeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoeCell.swift; sourceTree = "<group>"; };
-		45967722287CE51B00966C27 /* ShoeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShoeCell.xib; sourceTree = "<group>"; };
 		459AF4AF2895CFEF0008DB33 /* ProductListCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListCollectionViewController.swift; sourceTree = "<group>"; };
 		459AF4B128970D5E0008DB33 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		459AF4B3289719500008DB33 /* Shoe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shoe.swift; sourceTree = "<group>"; };
+		459AF4B7289798060008DB33 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		459AF4BA2897994D0008DB33 /* Brand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brand.swift; sourceTree = "<group>"; };
+		459AF4BC289799DA0008DB33 /* PriceRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceRange.swift; sourceTree = "<group>"; };
+		459AF4BE289854000008DB33 /* ShoeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoeType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +68,6 @@
 		45967709287CBCB800966C27 /* Applifashion */ = {
 			isa = PBXGroup;
 			children = (
-				45967720287CE4AC00966C27 /* ShoeCell */,
 				4596770A287CBCB800966C27 /* AppDelegate.swift */,
 				4596770C287CBCB800966C27 /* SceneDelegate.swift */,
 				45967710287CBCB800966C27 /* Main.storyboard */,
@@ -71,17 +76,21 @@
 				45967715287CBCBD00966C27 /* LaunchScreen.storyboard */,
 				45967718287CBCBD00966C27 /* Info.plist */,
 				459AF4AF2895CFEF0008DB33 /* ProductListCollectionViewController.swift */,
+				459AF4B3289719500008DB33 /* Shoe.swift */,
+				459AF4B92897993A0008DB33 /* utils */,
 			);
 			path = Applifashion;
 			sourceTree = "<group>";
 		};
-		45967720287CE4AC00966C27 /* ShoeCell */ = {
+		459AF4B92897993A0008DB33 /* utils */ = {
 			isa = PBXGroup;
 			children = (
-				45967721287CE51B00966C27 /* ShoeCell.swift */,
-				45967722287CE51B00966C27 /* ShoeCell.xib */,
+				459AF4BE289854000008DB33 /* ShoeType.swift */,
+				459AF4BC289799DA0008DB33 /* PriceRange.swift */,
+				459AF4B7289798060008DB33 /* Color.swift */,
+				459AF4BA2897994D0008DB33 /* Brand.swift */,
 			);
-			path = ShoeCell;
+			path = utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,7 +154,6 @@
 				45967717287CBCBD00966C27 /* LaunchScreen.storyboard in Resources */,
 				45967714287CBCBD00966C27 /* Assets.xcassets in Resources */,
 				45967712287CBCB800966C27 /* Main.storyboard in Resources */,
-				45967724287CE51C00966C27 /* ShoeCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,9 +166,13 @@
 			files = (
 				459AF4B228970D5E0008DB33 /* CollectionViewCell.swift in Sources */,
 				459AF4B02895CFEF0008DB33 /* ProductListCollectionViewController.swift in Sources */,
-				45967723287CE51B00966C27 /* ShoeCell.swift in Sources */,
 				4596770B287CBCB800966C27 /* AppDelegate.swift in Sources */,
+				459AF4BD289799DA0008DB33 /* PriceRange.swift in Sources */,
+				459AF4B4289719500008DB33 /* Shoe.swift in Sources */,
+				459AF4BB2897994D0008DB33 /* Brand.swift in Sources */,
 				4596770D287CBCB800966C27 /* SceneDelegate.swift in Sources */,
+				459AF4B8289798060008DB33 /* Color.swift in Sources */,
+				459AF4BF289854000008DB33 /* ShoeType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
