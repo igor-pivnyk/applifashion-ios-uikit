@@ -9,6 +9,10 @@ import UIKit
 
 class ProductListCollectionViewController: UICollectionViewController {
 
+    
+
+
+    
     let dataSource: [String] = ["USA", "Brazil", "USA", "Brazil", "USA", "Brazil", "USA", "Brazil"]
     
     
@@ -45,16 +49,26 @@ class ProductListCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         var cell = UICollectionViewCell()
         
-        if let countryCell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as? CollectionViewCell {
-            countryCell.configure(with: dataSource[indexPath.row])
+        if let shoeCell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as? CollectionViewCell {
+            var shoe: Shoe = shoes[indexPath.row]
+            shoeCell.configure(with: shoe.name, with: shoe.currentPrice, with: shoe.oldPrice, with:  UIImage(named:shoe.imageName)!)
             
-            cell = countryCell
+            cell = shoeCell
         }
-        
             
             
         return cell
     }
     
+
+    
+    
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let flowayout = collectionViewLayout as? UICollectionViewFlowLayout
+        let space: CGFloat = (flowayout?.minimumInteritemSpacing ?? 0.0) + (flowayout?.sectionInset.left ?? 0.0) + (flowayout?.sectionInset.right ?? 0.0)
+        let size:CGFloat = (collectionView.frame.size.width - space) / 2.0
+        return CGSize(width: size, height: size)
+    }
 
 }
