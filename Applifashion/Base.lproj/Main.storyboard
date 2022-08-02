@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YRa-yQ-uQv">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KMg-C4-Zcj">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Product List Collection View Controller-->
+        <!--Applifashion-->
         <scene sceneID="uZV-Mm-ELu">
             <objects>
                 <collectionViewController storyboardIdentifier="ProductListCollectionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YRa-yQ-uQv" customClass="ProductListCollectionViewController" customModule="Applifashion" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="SuB-Ph-50P">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ibL-I4-5G1">
@@ -96,10 +97,80 @@
                             <outlet property="delegate" destination="YRa-yQ-uQv" id="lMz-O9-c4g"/>
                         </connections>
                     </collectionView>
+                    <tabBarItem key="tabBarItem" title="Applifashion" image="logo-shoe" selectedImage="logo-shoe" id="fbZ-2h-3Aw"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="krK-aK-4fG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-807" y="157"/>
+        </scene>
+        <!--Main TabVC-->
+        <scene sceneID="Rba-EM-1Ag">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="KMg-C4-Zcj" customClass="MainTabVC" customModule="Applifashion" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nZ9-0D-dqw">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="YRa-yQ-uQv" kind="relationship" relationship="viewControllers" id="lVj-dJ-DeW"/>
+                        <segue destination="uST-jS-V7f" kind="relationship" relationship="viewControllers" id="oZa-bH-slb"/>
+                        <segue destination="eVR-Bf-0Gt" kind="relationship" relationship="viewControllers" id="sWS-m1-Pw3"/>
+                        <segue destination="IsJ-44-EOb" kind="relationship" relationship="viewControllers" id="eum-8A-Jna"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3cI-ZT-haH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="-807.24637681159425" y="-611.38392857142856"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="9YJ-xE-Pwp">
+            <objects>
+                <viewController id="uST-jS-V7f" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KZq-Gz-4DZ">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="1Wu-cY-Dge"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" selectedImage="magnifyingglass" id="yWH-lq-R6E"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9qu-yv-6E3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="164" y="139"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="29k-g6-5kG">
+            <objects>
+                <viewController id="IsJ-44-EOb" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TJH-QI-tNW">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="vjS-Pu-q4F"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person" catalog="system" selectedImage="person" id="oDA-lV-uoj"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ePG-jG-QWL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="893" y="145"/>
+        </scene>
+        <!--Cart-->
+        <scene sceneID="rUu-i7-ivG">
+            <objects>
+                <viewController id="eVR-Bf-0Gt" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uxo-Qr-lzX">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="sZy-pK-dDl"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Cart" image="cart" catalog="system" selectedImage="cart" id="Xfc-3K-gGN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EC4-u6-SGN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1737" y="139"/>
         </scene>
     </scenes>
     <resources>
@@ -108,7 +179,10 @@
         <image name="cart" catalog="system" width="128" height="102"/>
         <image name="discount" width="90" height="62"/>
         <image name="heart" catalog="system" width="128" height="109"/>
+        <image name="logo-shoe" width="48" height="18"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="one_day_left" width="230" height="60"/>
+        <image name="person" catalog="system" width="128" height="117"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

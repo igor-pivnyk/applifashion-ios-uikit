@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProductListCollectionViewController: UICollectionViewController {
+class ProductListCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
     
 
@@ -39,7 +39,19 @@ class ProductListCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        let layout = UICollectionViewFlowLayout()
+//        layout.sectionInset = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+              layout.sectionInset = UIEdgeInsets(top: 20, left: 0, bottom: 10, right: 0)
+              layout.minimumInteritemSpacing = 0
+              layout.minimumLineSpacing = 0
+              collectionView!.collectionViewLayout = layout
+        
+        collectionView?.register(HeaderCollectionReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCollectionReusableView.identifier)
+        collectionView?.register(FooterCollectionReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: FooterCollectionReusableView.identifier)
+
     }
+    
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
@@ -60,7 +72,33 @@ class ProductListCollectionViewController: UICollectionViewController {
         return cell
     }
     
+    
+    
+    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        if kind == UICollectionView.elementKindSectionFooter {
+            let footer = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: FooterCollectionReusableView.identifier, for: indexPath) as! FooterCollectionReusableView
+            
+            footer.configure()
+            return footer
+        } else {
+            let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCollectionReusableView.identifier, for: indexPath) as! HeaderCollectionReusableView
+            
+            header.configure()
+            return header
 
+        }
+       
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize(width: view.frame.size.width, height: 40)
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
+        return CGSize(width: view.frame.size.width, height: 200)
+
+    }
     
     
     
@@ -68,7 +106,9 @@ class ProductListCollectionViewController: UICollectionViewController {
         let flowayout = collectionViewLayout as? UICollectionViewFlowLayout
         let space: CGFloat = (flowayout?.minimumInteritemSpacing ?? 0.0) + (flowayout?.sectionInset.left ?? 0.0) + (flowayout?.sectionInset.right ?? 0.0)
         let size:CGFloat = (collectionView.frame.size.width - space) / 2.0
+        
         return CGSize(width: size, height: size)
     }
+    
 
 }

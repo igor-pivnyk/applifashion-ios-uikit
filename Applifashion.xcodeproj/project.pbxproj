@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4502C9B62898E177001C032C /* HeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4502C9B52898E177001C032C /* HeaderCollectionReusableView.swift */; };
 		4596770B287CBCB800966C27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4596770A287CBCB800966C27 /* AppDelegate.swift */; };
 		4596770D287CBCB800966C27 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4596770C287CBCB800966C27 /* SceneDelegate.swift */; };
 		45967712287CBCB800966C27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45967710287CBCB800966C27 /* Main.storyboard */; };
 		45967714287CBCBD00966C27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45967713287CBCBD00966C27 /* Assets.xcassets */; };
 		45967717287CBCBD00966C27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45967715287CBCBD00966C27 /* LaunchScreen.storyboard */; };
+		4597166F2899D5D900EB886C /* FooterCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4597166E2899D5D900EB886C /* FooterCollectionReusableView.swift */; };
 		459AF4B02895CFEF0008DB33 /* ProductListCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459AF4AF2895CFEF0008DB33 /* ProductListCollectionViewController.swift */; };
 		459AF4B228970D5E0008DB33 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459AF4B128970D5E0008DB33 /* CollectionViewCell.swift */; };
 		459AF4B4289719500008DB33 /* Shoe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459AF4B3289719500008DB33 /* Shoe.swift */; };
@@ -19,9 +21,15 @@
 		459AF4BB2897994D0008DB33 /* Brand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459AF4BA2897994D0008DB33 /* Brand.swift */; };
 		459AF4BD289799DA0008DB33 /* PriceRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459AF4BC289799DA0008DB33 /* PriceRange.swift */; };
 		459AF4BF289854000008DB33 /* ShoeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459AF4BE289854000008DB33 /* ShoeType.swift */; };
+		459AF4C2289895AE0008DB33 /* ApplifashionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459AF4C1289895AE0008DB33 /* ApplifashionVC.swift */; };
+		459AF4C42898960A0008DB33 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459AF4C32898960A0008DB33 /* SearchVC.swift */; };
+		459AF4C6289896230008DB33 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459AF4C5289896230008DB33 /* ProfileVC.swift */; };
+		459AF4C82898963B0008DB33 /* CartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459AF4C72898963B0008DB33 /* CartVC.swift */; };
+		459AF4CA28989BB20008DB33 /* MainTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459AF4C928989BB20008DB33 /* MainTabVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4502C9B52898E177001C032C /* HeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		45967707287CBCB800966C27 /* Applifashion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Applifashion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4596770A287CBCB800966C27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4596770C287CBCB800966C27 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -29,6 +37,7 @@
 		45967713287CBCBD00966C27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		45967716287CBCBD00966C27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		45967718287CBCBD00966C27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4597166E2899D5D900EB886C /* FooterCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterCollectionReusableView.swift; sourceTree = "<group>"; };
 		459AF4AF2895CFEF0008DB33 /* ProductListCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListCollectionViewController.swift; sourceTree = "<group>"; };
 		459AF4B128970D5E0008DB33 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		459AF4B3289719500008DB33 /* Shoe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shoe.swift; sourceTree = "<group>"; };
@@ -36,6 +45,11 @@
 		459AF4BA2897994D0008DB33 /* Brand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brand.swift; sourceTree = "<group>"; };
 		459AF4BC289799DA0008DB33 /* PriceRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceRange.swift; sourceTree = "<group>"; };
 		459AF4BE289854000008DB33 /* ShoeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoeType.swift; sourceTree = "<group>"; };
+		459AF4C1289895AE0008DB33 /* ApplifashionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplifashionVC.swift; sourceTree = "<group>"; };
+		459AF4C32898960A0008DB33 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
+		459AF4C5289896230008DB33 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		459AF4C72898963B0008DB33 /* CartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartVC.swift; sourceTree = "<group>"; };
+		459AF4C928989BB20008DB33 /* MainTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +82,9 @@
 		45967709287CBCB800966C27 /* Applifashion */ = {
 			isa = PBXGroup;
 			children = (
+				4597166E2899D5D900EB886C /* FooterCollectionReusableView.swift */,
+				4502C9B52898E177001C032C /* HeaderCollectionReusableView.swift */,
+				459AF4C02898957E0008DB33 /* tabBar */,
 				4596770A287CBCB800966C27 /* AppDelegate.swift */,
 				4596770C287CBCB800966C27 /* SceneDelegate.swift */,
 				45967710287CBCB800966C27 /* Main.storyboard */,
@@ -91,6 +108,18 @@
 				459AF4BA2897994D0008DB33 /* Brand.swift */,
 			);
 			path = utils;
+			sourceTree = "<group>";
+		};
+		459AF4C02898957E0008DB33 /* tabBar */ = {
+			isa = PBXGroup;
+			children = (
+				459AF4C1289895AE0008DB33 /* ApplifashionVC.swift */,
+				459AF4C32898960A0008DB33 /* SearchVC.swift */,
+				459AF4C5289896230008DB33 /* ProfileVC.swift */,
+				459AF4C72898963B0008DB33 /* CartVC.swift */,
+				459AF4C928989BB20008DB33 /* MainTabVC.swift */,
+			);
+			path = tabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,7 +193,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				459AF4C6289896230008DB33 /* ProfileVC.swift in Sources */,
+				459AF4C2289895AE0008DB33 /* ApplifashionVC.swift in Sources */,
+				459AF4C42898960A0008DB33 /* SearchVC.swift in Sources */,
 				459AF4B228970D5E0008DB33 /* CollectionViewCell.swift in Sources */,
+				459AF4C82898963B0008DB33 /* CartVC.swift in Sources */,
+				459AF4CA28989BB20008DB33 /* MainTabVC.swift in Sources */,
 				459AF4B02895CFEF0008DB33 /* ProductListCollectionViewController.swift in Sources */,
 				4596770B287CBCB800966C27 /* AppDelegate.swift in Sources */,
 				459AF4BD289799DA0008DB33 /* PriceRange.swift in Sources */,
@@ -172,6 +206,8 @@
 				459AF4BB2897994D0008DB33 /* Brand.swift in Sources */,
 				4596770D287CBCB800966C27 /* SceneDelegate.swift in Sources */,
 				459AF4B8289798060008DB33 /* Color.swift in Sources */,
+				4502C9B62898E177001C032C /* HeaderCollectionReusableView.swift in Sources */,
+				4597166F2899D5D900EB886C /* FooterCollectionReusableView.swift in Sources */,
 				459AF4BF289854000008DB33 /* ShoeType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
