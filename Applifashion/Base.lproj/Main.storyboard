@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Applifashion-->
+        <!--Product List Collection View Controller-->
         <scene sceneID="uZV-Mm-ELu">
             <objects>
                 <collectionViewController storyboardIdentifier="ProductListCollectionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YRa-yQ-uQv" customClass="ProductListCollectionViewController" customModule="Applifashion" customModuleProvider="target" sceneMemberID="viewController">
@@ -97,11 +97,73 @@
                             <outlet property="delegate" destination="YRa-yQ-uQv" id="lMz-O9-c4g"/>
                         </connections>
                     </collectionView>
-                    <tabBarItem key="tabBarItem" title="Applifashion" image="logo-shoe" selectedImage="logo-shoe" id="fbZ-2h-3Aw"/>
+                    <navigationItem key="navigationItem" id="ekB-if-sg3"/>
+                    <connections>
+                        <segue destination="3Rd-EX-ZHI" kind="show" id="POH-Rx-e50"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="krK-aK-4fG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-807" y="157"/>
+            <point key="canvasLocation" x="92.523364485981304" y="156.80345572354213"/>
+        </scene>
+        <!--Shoe Detail View Controller-->
+        <scene sceneID="Noh-ZD-28W">
+            <objects>
+                <viewController storyboardIdentifier="ShoeDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3Rd-EX-ZHI" customClass="ShoeDetailViewController" customModule="Applifashion" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5YE-0y-vrQ" customClass="ShoeDetail">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cwt-wY-h4E">
+                                <rect key="frame" x="32" y="90" width="135" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="4 reviews" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iiQ-W8-Fmd">
+                                <rect key="frame" x="147" y="322" width="135" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qYh-qn-Pyz">
+                                <rect key="frame" x="81" y="180" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="review_rating" translatesAutoresizingMaskIntoConstraints="NO" id="tFg-sf-4Kx">
+                                <rect key="frame" x="20" y="316" width="105" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SKU: MTKRY-001" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iMS-pd-cDe">
+                                <rect key="frame" x="20" y="366" width="135" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sh5-yI-ebm">
+                                <rect key="frame" x="20" y="395" width="388" height="210"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">These boots are comfortable enough to wear all day. Well made. I love the “look”. Best Used For Casual Everyday Walk fearlessly into the cooler months in the Sorel Joan Of Arctic Wedge II Chelsea Boot. Boasting the iconic wedge platform that\'s as comfortable as it is stylish, this boot features a waterproof upper.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="txM-Qz-QqA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="TyM-8u-h9H"/>
+                    <connections>
+                        <outlet property="shoeImageView" destination="qYh-qn-Pyz" id="zZl-YL-9FD"/>
+                        <outlet property="shoeLabel" destination="Cwt-wY-h4E" id="Ibt-HB-FOc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jUB-Cv-0fT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1593.9252336448596" y="245.57235421166308"/>
         </scene>
         <!--Main TabVC-->
         <scene sceneID="Rba-EM-1Ag">
@@ -114,7 +176,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="YRa-yQ-uQv" kind="relationship" relationship="viewControllers" id="lVj-dJ-DeW"/>
+                        <segue destination="NOe-HQ-xXf" kind="relationship" relationship="viewControllers" id="lVj-dJ-DeW"/>
                         <segue destination="uST-jS-V7f" kind="relationship" relationship="viewControllers" id="oZa-bH-slb"/>
                         <segue destination="eVR-Bf-0Gt" kind="relationship" relationship="viewControllers" id="sWS-m1-Pw3"/>
                         <segue destination="IsJ-44-EOb" kind="relationship" relationship="viewControllers" id="eum-8A-Jna"/>
@@ -138,7 +200,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9qu-yv-6E3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="164" y="139"/>
+            <point key="canvasLocation" x="1062.6168224299065" y="138.66090712742982"/>
         </scene>
         <!--Profile-->
         <scene sceneID="29k-g6-5kG">
@@ -154,7 +216,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ePG-jG-QWL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="893" y="145"/>
+            <point key="canvasLocation" x="1792.9906542056074" y="144.49244060475164"/>
         </scene>
         <!--Cart-->
         <scene sceneID="rUu-i7-ivG">
@@ -170,7 +232,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EC4-u6-SGN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1737" y="139"/>
+            <point key="canvasLocation" x="2636.9158878504672" y="138.66090712742982"/>
+        </scene>
+        <!--Applifashion-->
+        <scene sceneID="vh0-Ux-fbU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NOe-HQ-xXf" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Applifashion" image="logo-shoe" selectedImage="logo-shoe" id="fbZ-2h-3Aw"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uL6-Tz-GSJ">
+                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="YRa-yQ-uQv" kind="relationship" relationship="rootViewController" id="E8y-ok-7lp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pki-eC-a7B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-807.47663551401865" y="156.80345572354213"/>
         </scene>
     </scenes>
     <resources>
@@ -183,6 +264,7 @@
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="one_day_left" width="230" height="60"/>
         <image name="person" catalog="system" width="128" height="117"/>
+        <image name="review_rating" width="170" height="25"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

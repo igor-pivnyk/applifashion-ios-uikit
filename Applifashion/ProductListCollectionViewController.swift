@@ -90,13 +90,24 @@ class ProductListCollectionViewController: UICollectionViewController, UICollect
        
     }
     
+    
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: ShoeDetailViewController.identifier) as? ShoeDetailViewController
+        let shoe = shoes[indexPath.row]
+        // do something vc
+        vc?.shoeName = shoe.name;
+        vc?.shoeImage = UIImage(named:shoe.imageName)!
+        self.navigationController?.pushViewController(vc!, animated: true)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         return CGSize(width: view.frame.size.width, height: 40)
     }
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
-        return CGSize(width: view.frame.size.width, height: 200)
+        return CGSize(width: view.frame.size.width, height: 230)
 
     }
     

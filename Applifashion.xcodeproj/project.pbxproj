@@ -26,6 +26,7 @@
 		459AF4C6289896230008DB33 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459AF4C5289896230008DB33 /* ProfileVC.swift */; };
 		459AF4C82898963B0008DB33 /* CartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459AF4C72898963B0008DB33 /* CartVC.swift */; };
 		459AF4CA28989BB20008DB33 /* MainTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459AF4C928989BB20008DB33 /* MainTabVC.swift */; };
+		45D95EFB28A2EAE900C8595B /* ShoeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D95EFA28A2EAE900C8595B /* ShoeDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		459AF4C5289896230008DB33 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		459AF4C72898963B0008DB33 /* CartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartVC.swift; sourceTree = "<group>"; };
 		459AF4C928989BB20008DB33 /* MainTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabVC.swift; sourceTree = "<group>"; };
+		45D95EFA28A2EAE900C8595B /* ShoeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoeDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 			children = (
 				4597166E2899D5D900EB886C /* FooterCollectionReusableView.swift */,
 				4502C9B52898E177001C032C /* HeaderCollectionReusableView.swift */,
+				45D95EFA28A2EAE900C8595B /* ShoeDetailViewController.swift */,
 				459AF4C02898957E0008DB33 /* tabBar */,
 				4596770A287CBCB800966C27 /* AppDelegate.swift */,
 				4596770C287CBCB800966C27 /* SceneDelegate.swift */,
@@ -205,6 +208,7 @@
 				459AF4B4289719500008DB33 /* Shoe.swift in Sources */,
 				459AF4BB2897994D0008DB33 /* Brand.swift in Sources */,
 				4596770D287CBCB800966C27 /* SceneDelegate.swift in Sources */,
+				45D95EFB28A2EAE900C8595B /* ShoeDetailViewController.swift in Sources */,
 				459AF4B8289798060008DB33 /* Color.swift in Sources */,
 				4502C9B62898E177001C032C /* HeaderCollectionReusableView.swift in Sources */,
 				4597166F2899D5D900EB886C /* FooterCollectionReusableView.swift in Sources */,
