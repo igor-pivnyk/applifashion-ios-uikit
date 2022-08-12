@@ -8,14 +8,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "306325FC-1101-4275-96D5-66EC754AB4DD"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Applifashion/HeaderCollectionReusableView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "126"
-            endingLineNumber = "126"
+            startingLineNumber = "171"
+            endingLineNumber = "171"
             landmarkName = "showSortByOptions(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -24,15 +24,95 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "58D270B7-14B3-46E2-BA18-DBCB3E323AE6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Applifashion/HeaderCollectionReusableView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "176"
+            endingLineNumber = "176"
+            landmarkName = "show(sender:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "58569F71-2C40-44E3-8682-72BBF8DB4ECC"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Applifashion/HeaderCollectionReusableView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "131"
-            endingLineNumber = "131"
-            landmarkName = "show(sender:)"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "HeaderCollectionReusableView"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "58569F71-2C40-44E3-8682-72BBF8DB4ECC - 8ab1236efe2f02ad"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Applifashion.HeaderCollectionReusableView.init(frame: __C.CGRect) -&gt; Applifashion.HeaderCollectionReusableView"
+                  moduleName = "Applifashion"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dvinnik/global/applifashion-ios-uikit/Applifashion/Applifashion/HeaderCollectionReusableView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "80"
+                  endingLineNumber = "80"
+                  offsetFromSymbolStart = "195">
+               </Location>
+               <Location
+                  uuid = "58569F71-2C40-44E3-8682-72BBF8DB4ECC - e5eb474bc7084cda"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Applifashion.HeaderCollectionReusableView.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Applifashion.HeaderCollectionReusableView&gt;"
+                  moduleName = "Applifashion"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dvinnik/global/applifashion-ios-uikit/Applifashion/Applifashion/HeaderCollectionReusableView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "80"
+                  endingLineNumber = "80"
+                  offsetFromSymbolStart = "145">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "62E69155-CC5C-4B2D-BE35-2A1D1DAB8720"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Applifashion/HeaderCollectionReusableView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "filter"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7E1C2CB6-1DC6-42B6-92EA-EBC34CEDEB33"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Applifashion/ProductListCollectionViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
+            landmarkName = "imageTap()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

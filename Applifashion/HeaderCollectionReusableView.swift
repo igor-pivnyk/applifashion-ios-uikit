@@ -11,12 +11,56 @@ class HeaderCollectionReusableView: UICollectionReusableView {
     
     static let identifier = "HeaderCollectionReusableView"
     
+//    private let filterButton: UIButton = {
+//        let filterButton = UIButton()
+//        filterButton.backgroundColor = .red
+////        filterButton.setTitle("Sort By", for: .normal)
+////        sortByButton.setTitleColor(.black, for: .normal)
+//        filterButton.frame = CGRect(x: 380, y: 5, width: 70, height: 30)
+//        filterButton.addTarget(self, action: #selector(imageTap), for: .touchUpInside)
+//
+//        return filterButton
+//    }()
+    
     private let filter: UIImageView = {
+        
         let filterImage = UIImage(named: "filter.png")
+     
         let filterView = UIImageView(image: filterImage!)
+        
+     
+//
+//
+//        filterView.isUserInteractionEnabled = true
+//        filterView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(imageTap)))
+//
         filterView.frame = CGRect(x: 380, y: 5, width: 30, height: 30)
         return filterView
     }()
+//    
+//    @objc func imageTap() {
+//        print("test")
+//        
+////
+////        let storyboard = UIStoryboard(name: "Main",  bundle: nil)
+////        let aaaVC = storyboard.instantiateViewController(withIdentifier: FilterController.identifier) as! FilterController
+////           self.navigationController?.pushViewController(aaaVC, animated: true)
+//        
+//        
+////        self.present(FilterController())
+////           // or push to the navigation stack
+////           self.navigationController?.push(FilterController())
+////
+////        let vc = self.storyboard?.instantiateViewController(withIdentifier: FilterController.identifier) as? FilterController
+////
+////        self.navigationController?.pushViewController(vc!, animated: true)
+////
+////        // present modally
+////        self.present(FilterController())
+////        // or push to the navigation stack
+////        self.navigationController?.push(FilterController())
+////
+//    }
     
     
 //     let dropDown = DropDown() //2
@@ -115,6 +159,7 @@ class HeaderCollectionReusableView: UICollectionReusableView {
 
 
         addSubview(filter)
+
 
 //        addSubview(stackview)
 

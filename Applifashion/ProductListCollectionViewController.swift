@@ -84,13 +84,55 @@ class ProductListCollectionViewController: UICollectionViewController, UICollect
             let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCollectionReusableView.identifier, for: indexPath) as! HeaderCollectionReusableView
             
             header.configure()
+            
+            header.addSubview(filterButton)
             return header
 
         }
+        
        
     }
     
     
+    private let filterButton: UIButton = {
+        let filterButton = UIButton()
+//        filterButton.backgroundColor = .red
+//        filterButton.setTitle("Sort By", for: .normal)
+//        sortByButton.setTitleColor(.black, for: .normal)
+        filterButton.frame = CGRect(x: 380, y: 5, width: 70, height: 30)
+        filterButton.addTarget(self, action: #selector(imageTap), for: .touchUpInside)
+
+        return filterButton
+    }()
+    
+    
+    
+    @objc func imageTap() {
+        print("test")
+        
+        let vc = storyboard?.instantiateViewController(withIdentifier: FilterController.identifier) as? FilterController
+        self.navigationController?.pushViewController(vc!, animated: true)
+        
+//
+//        let storyboard = UIStoryboard(name: "Main",  bundle: nil)
+//        let aaaVC = storyboard.instantiateViewController(withIdentifier: FilterController.identifier) as! FilterController
+//           self.navigationController?.pushViewController(aaaVC, animated: true)
+        
+        
+//        self.present(FilterController())
+//           // or push to the navigation stack
+//           self.navigationController?.push(FilterController())
+//
+//        let vc = self.storyboard?.instantiateViewController(withIdentifier: FilterController.identifier) as? FilterController
+//
+//        self.navigationController?.pushViewController(vc!, animated: true)
+//
+//        // present modally
+//        self.present(FilterController())
+//        // or push to the navigation stack
+//        self.navigationController?.push(FilterController())
+//
+    }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let vc = storyboard?.instantiateViewController(withIdentifier: ShoeDetailViewController.identifier) as? ShoeDetailViewController

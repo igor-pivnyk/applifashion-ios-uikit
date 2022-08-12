@@ -12,25 +12,7 @@ class FooterCollectionReusableView: UICollectionReusableView {
     static let identifier = "FooterCollectionReusableView"
     
 
-    
-    let secondLabel : UILabel = {
-        let label = UILabel()
-        label.text = "1234"
-        label.textAlignment = .center
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.backgroundColor = UIColor.blue
-        
-        return label
-    }()
 
-    let thirdLabel : UILabel = {
-        let label = UILabel()
-        label.text = "5678"
-        label.textAlignment = .center
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.backgroundColor = UIColor.red
-        return label
-    }()
   
     // First column
 
@@ -201,13 +183,6 @@ stackview.layoutMargins = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 0)
         
     }
 
-    override func layoutSubviews() {
-        super.layoutSubviews()
-//        test.frame = bounds
-//        aboutUs.frame = bounds
-
-    }
-    
     static func createPlainLabel(text: String, alignment: NSTextAlignment) -> UILabel {
         let label = UILabel()
         label.text = text

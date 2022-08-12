@@ -22,7 +22,9 @@ class ShoeDetailViewController: UIViewController {
         // Do any additional setup after loading the view.
         shoeLabel.text = shoeName
         shoeImageView.image = shoeImage
-    }
+            }
+    
+    
     
 
 

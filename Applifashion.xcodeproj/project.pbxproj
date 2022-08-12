@@ -28,7 +28,7 @@
 		459AF4C82898963B0008DB33 /* CartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459AF4C72898963B0008DB33 /* CartVC.swift */; };
 		459AF4CA28989BB20008DB33 /* MainTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459AF4C928989BB20008DB33 /* MainTabVC.swift */; };
 		45D95EFB28A2EAE900C8595B /* ShoeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D95EFA28A2EAE900C8595B /* ShoeDetailViewController.swift */; };
-		45DB1CC228A6260900F0F983 /* FilterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DB1CC028A6260900F0F983 /* FilterController.swift */; };
+		45DB1CC428A6F36D00F0F983 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DB1CC328A6F36D00F0F983 /* FilterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,7 +54,7 @@
 		459AF4C72898963B0008DB33 /* CartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartVC.swift; sourceTree = "<group>"; };
 		459AF4C928989BB20008DB33 /* MainTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabVC.swift; sourceTree = "<group>"; };
 		45D95EFA28A2EAE900C8595B /* ShoeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoeDetailViewController.swift; sourceTree = "<group>"; };
-		45DB1CC128A6260900F0F983 /* Base */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Base; path = Base.lproj/FilterController.swift; sourceTree = "<group>"; };
+		45DB1CC328A6F36D00F0F983 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		EEA6DFB78928965F1F5168CF /* Pods-Applifashion.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Applifashion.release.xcconfig"; path = "Target Support Files/Pods-Applifashion/Pods-Applifashion.release.xcconfig"; sourceTree = "<group>"; };
 		F276E0CCC6E4278E2987EA7A /* Pods-Applifashion.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Applifashion.debug.xcconfig"; path = "Target Support Files/Pods-Applifashion/Pods-Applifashion.debug.xcconfig"; sourceTree = "<group>"; };
 		FCB842E0C11EDD1F8CB67128 /* Pods_Applifashion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Applifashion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,7 +115,7 @@
 				459AF4AF2895CFEF0008DB33 /* ProductListCollectionViewController.swift */,
 				459AF4B3289719500008DB33 /* Shoe.swift */,
 				459AF4B92897993A0008DB33 /* utils */,
-				45DB1CC028A6260900F0F983 /* FilterController.swift */,
+				45DB1CC328A6F36D00F0F983 /* FilterViewController.swift */,
 			);
 			path = Applifashion;
 			sourceTree = "<group>";
@@ -280,9 +280,9 @@
 				459AF4BB2897994D0008DB33 /* Brand.swift in Sources */,
 				4596770D287CBCB800966C27 /* SceneDelegate.swift in Sources */,
 				45D95EFB28A2EAE900C8595B /* ShoeDetailViewController.swift in Sources */,
+				45DB1CC428A6F36D00F0F983 /* FilterViewController.swift in Sources */,
 				459AF4B8289798060008DB33 /* Color.swift in Sources */,
 				4502C9B62898E177001C032C /* HeaderCollectionReusableView.swift in Sources */,
-				45DB1CC228A6260900F0F983 /* FilterController.swift in Sources */,
 				4597166F2899D5D900EB886C /* FooterCollectionReusableView.swift in Sources */,
 				459AF4BF289854000008DB33 /* ShoeType.swift in Sources */,
 			);
@@ -305,14 +305,6 @@
 				45967716287CBCBD00966C27 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		45DB1CC028A6260900F0F983 /* FilterController.swift */ = {
-			isa = PBXVariantGroup;
-			children = (
-				45DB1CC128A6260900F0F983 /* Base */,
-			);
-			name = FilterController.swift;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
