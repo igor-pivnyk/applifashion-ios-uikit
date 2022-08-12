@@ -8,10 +8,10 @@
 import UIKit
 
 class FilterViewController: UIViewController {
-
+    static let identifier = "FilterViewController"
     override func viewDidLoad() {
         super.viewDidLoad()
-
+    }
 //        soccerTypeButton?.setImage(UIImage(named:"square"), for: .normal)
 //        soccerTypeButton?.setImage(UIImage(named:"checkmark"), for: .selected)
 //

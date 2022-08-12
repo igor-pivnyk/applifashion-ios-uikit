@@ -110,7 +110,7 @@ class ProductListCollectionViewController: UICollectionViewController, UICollect
     @objc func imageTap() {
         print("test")
         
-        let vc = storyboard?.instantiateViewController(withIdentifier: FilterController.identifier) as? FilterController
+        let vc = storyboard?.instantiateViewController(withIdentifier: FilterViewController.identifier) as? FilterViewController
         self.navigationController?.pushViewController(vc!, animated: true)
         
 //
