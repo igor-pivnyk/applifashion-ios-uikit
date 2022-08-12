@@ -344,7 +344,7 @@
         <!--Filter View Controller-->
         <scene sceneID="iUN-Cd-leD">
             <objects>
-                <viewController storyboardIdentifier="FilterController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wvQ-ba-2ui" customClass="FilterViewController" customModule="Applifashion" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FilterViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wvQ-ba-2ui" customClass="FilterViewController" customModule="Applifashion" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="em2-F2-pFE">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
