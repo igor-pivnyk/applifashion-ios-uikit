@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F6A9CBA69AE68DD6B29F691 /* Pods_Applifashion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCB842E0C11EDD1F8CB67128 /* Pods_Applifashion.framework */; };
 		4502C9B62898E177001C032C /* HeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4502C9B52898E177001C032C /* HeaderCollectionReusableView.swift */; };
 		4596770B287CBCB800966C27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4596770A287CBCB800966C27 /* AppDelegate.swift */; };
 		4596770D287CBCB800966C27 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4596770C287CBCB800966C27 /* SceneDelegate.swift */; };
@@ -27,6 +28,7 @@
 		459AF4C82898963B0008DB33 /* CartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459AF4C72898963B0008DB33 /* CartVC.swift */; };
 		459AF4CA28989BB20008DB33 /* MainTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459AF4C928989BB20008DB33 /* MainTabVC.swift */; };
 		45D95EFB28A2EAE900C8595B /* ShoeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D95EFA28A2EAE900C8595B /* ShoeDetailViewController.swift */; };
+		45DB1CC228A6260900F0F983 /* FilterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DB1CC028A6260900F0F983 /* FilterController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,10 @@
 		459AF4C72898963B0008DB33 /* CartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartVC.swift; sourceTree = "<group>"; };
 		459AF4C928989BB20008DB33 /* MainTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabVC.swift; sourceTree = "<group>"; };
 		45D95EFA28A2EAE900C8595B /* ShoeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoeDetailViewController.swift; sourceTree = "<group>"; };
+		45DB1CC128A6260900F0F983 /* Base */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Base; path = Base.lproj/FilterController.swift; sourceTree = "<group>"; };
+		EEA6DFB78928965F1F5168CF /* Pods-Applifashion.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Applifashion.release.xcconfig"; path = "Target Support Files/Pods-Applifashion/Pods-Applifashion.release.xcconfig"; sourceTree = "<group>"; };
+		F276E0CCC6E4278E2987EA7A /* Pods-Applifashion.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Applifashion.debug.xcconfig"; path = "Target Support Files/Pods-Applifashion/Pods-Applifashion.debug.xcconfig"; sourceTree = "<group>"; };
+		FCB842E0C11EDD1F8CB67128 /* Pods_Applifashion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Applifashion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,17 +65,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F6A9CBA69AE68DD6B29F691 /* Pods_Applifashion.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		24B8ACF77CE14D6B4D78E4A2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FCB842E0C11EDD1F8CB67128 /* Pods_Applifashion.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		459676FE287CBCB800966C27 = {
 			isa = PBXGroup;
 			children = (
 				45967709287CBCB800966C27 /* Applifashion */,
 				45967708287CBCB800966C27 /* Products */,
+				9BE823A7D339D905C791AE6F /* Pods */,
+				24B8ACF77CE14D6B4D78E4A2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,6 +115,7 @@
 				459AF4AF2895CFEF0008DB33 /* ProductListCollectionViewController.swift */,
 				459AF4B3289719500008DB33 /* Shoe.swift */,
 				459AF4B92897993A0008DB33 /* utils */,
+				45DB1CC028A6260900F0F983 /* FilterController.swift */,
 			);
 			path = Applifashion;
 			sourceTree = "<group>";
@@ -125,6 +143,15 @@
 			path = tabBar;
 			sourceTree = "<group>";
 		};
+		9BE823A7D339D905C791AE6F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F276E0CCC6E4278E2987EA7A /* Pods-Applifashion.debug.xcconfig */,
+				EEA6DFB78928965F1F5168CF /* Pods-Applifashion.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +159,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4596771B287CBCBD00966C27 /* Build configuration list for PBXNativeTarget "Applifashion" */;
 			buildPhases = (
+				90B955F596575B0A3F3A8482 /* [CP] Check Pods Manifest.lock */,
 				45967703287CBCB800966C27 /* Sources */,
 				45967704287CBCB800966C27 /* Frameworks */,
 				45967705287CBCB800966C27 /* Resources */,
+				2BBE8961D5700B1789CA8842 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -191,6 +220,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2BBE8961D5700B1789CA8842 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Applifashion/Pods-Applifashion-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Applifashion/Pods-Applifashion-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Applifashion/Pods-Applifashion-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		90B955F596575B0A3F3A8482 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Applifashion-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		45967703287CBCB800966C27 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -211,6 +282,7 @@
 				45D95EFB28A2EAE900C8595B /* ShoeDetailViewController.swift in Sources */,
 				459AF4B8289798060008DB33 /* Color.swift in Sources */,
 				4502C9B62898E177001C032C /* HeaderCollectionReusableView.swift in Sources */,
+				45DB1CC228A6260900F0F983 /* FilterController.swift in Sources */,
 				4597166F2899D5D900EB886C /* FooterCollectionReusableView.swift in Sources */,
 				459AF4BF289854000008DB33 /* ShoeType.swift in Sources */,
 			);
@@ -233,6 +305,14 @@
 				45967716287CBCBD00966C27 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		45DB1CC028A6260900F0F983 /* FilterController.swift */ = {
+			isa = PBXVariantGroup;
+			children = (
+				45DB1CC128A6260900F0F983 /* Base */,
+			);
+			name = FilterController.swift;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -354,6 +434,7 @@
 		};
 		4596771C287CBCBD00966C27 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F276E0CCC6E4278E2987EA7A /* Pods-Applifashion.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -382,6 +463,7 @@
 		};
 		4596771D287CBCBD00966C27 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EEA6DFB78928965F1F5168CF /* Pods-Applifashion.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
