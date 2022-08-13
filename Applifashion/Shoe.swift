@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class Shoe {
+class Shoe: NSObject, NSCopying  {
         
     public static let NO_OLD_PRICE: String = "1"
     
@@ -37,5 +37,9 @@ class Shoe {
         self.currentPriceValue = Int(currentPriceValueDouble)
     }
     
+    func copy(with zone: NSZone? = nil) -> Any {
+        let copy = Shoe(name: name, imageName: imageName, color: color, type: type, brand: brand, currentPrice: currentPrice, oldPrice: oldPrice)
+           return copy
+       }
 }
 

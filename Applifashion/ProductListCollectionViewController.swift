@@ -9,14 +9,18 @@ import UIKit
 
 class ProductListCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
+    static let identifier = "ProductListCollectionViewController"
     
+    var brands = [Brand]()
+    var colors = [Color]()
+    var priceRanges = [PriceRange]()
+    var types = [ShoeType]()
 
 
+
+    var dataSource: [Shoe] = [Shoe]()
     
-    let dataSource: [String] = ["USA", "Brazil", "USA", "Brazil", "USA", "Brazil", "USA", "Brazil"]
-    
-    
-    let shoes: [Shoe] = [
+    let originalShoes: [Shoe] = [
         Shoe(name: "Appli Air x Night", imageName: "dress_shoes", color: Color.Black, type: ShoeType.Soccer, brand: Brand.Abibas, currentPrice: "$33.00", oldPrice: "$48.00"),
         
         Shoe(name: "Appli ACG React", imageName: "yellow_shoes", color: Color.Yellow, type: ShoeType.Basketball, brand: Brand.Mykey, currentPrice: "$110.00", oldPrice: Shoe.NO_OLD_PRICE),
@@ -34,10 +38,46 @@ class ProductListCollectionViewController: UICollectionViewController, UICollect
         Shoe(name: "Appli Okwahn II", imageName: "white_shoes", color: Color.White, type: ShoeType.Soccer, brand: Brand.Abibas, currentPrice: "$62.00", oldPrice: "$90.00")
         
     ]
+    
+    func filterShoes() {
+        
+        
+        if brands.isEmpty
+            && colors.isEmpty
+            && priceRanges.isEmpty
+            && types.isEmpty {
+            dataSource = originalShoes.map { $0.copy() as! Shoe }
+        }
+        
+        for shoe in originalShoes {
+            
+            if (!brands.isEmpty && brands.contains(shoe.brand))
+                || (!colors.isEmpty && colors.contains(shoe.color))
+                || (!priceRanges.isEmpty && isWithinPriceRange(shoe: shoe))
+                || (!types.isEmpty && types.contains(shoe.type)) {
+                dataSource.append(shoe)
+            }
+        }
+//
+//        originalShoes.forEach(<#T##body: (Shoe) throws -> Void##(Shoe) throws -> Void#>)
+    }
+    
+    
+    func isWithinPriceRange(shoe: Shoe) -> Bool {
+        for priceRange in priceRanges {
+            if (priceRange.values.minPrice >=  shoe.currentPriceValue
+                || shoe.currentPriceValue <=  priceRange.values.maxPrice) {
+                return true
+            }
+        }
+        return false
+    }
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        filterShoes()
         
 //        let layout = UICollectionViewFlowLayout()
 //        layout.sectionInset = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
@@ -52,6 +92,8 @@ class ProductListCollectionViewController: UICollectionViewController, UICollect
 
     }
     
+//    func filterShoes
+    
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
@@ -62,7 +104,7 @@ class ProductListCollectionViewController: UICollectionViewController, UICollect
         var cell = UICollectionViewCell()
         
         if let shoeCell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as? CollectionViewCell {
-            var shoe: Shoe = shoes[indexPath.row]
+            var shoe: Shoe = dataSource[indexPath.row]
             shoeCell.configure(with: shoe.name, with: shoe.currentPrice, with: shoe.oldPrice, with:  UIImage(named:shoe.imageName)!)
             
             cell = shoeCell
@@ -136,7 +178,7 @@ class ProductListCollectionViewController: UICollectionViewController, UICollect
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let vc = storyboard?.instantiateViewController(withIdentifier: ShoeDetailViewController.identifier) as? ShoeDetailViewController
-        let shoe = shoes[indexPath.row]
+        let shoe = dataSource[indexPath.row]
         // do something vc
         vc?.shoeName = shoe.name;
         vc?.shoeImage = UIImage(named:shoe.imageName)!
