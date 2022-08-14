@@ -51,10 +51,10 @@ class ProductListCollectionViewController: UICollectionViewController, UICollect
         
         for shoe in originalShoes {
             
-            if (!brands.isEmpty && brands.contains(shoe.brand))
-                || (!colors.isEmpty && colors.contains(shoe.color))
-                || (!priceRanges.isEmpty && isWithinPriceRange(shoe: shoe))
-                || (!types.isEmpty && types.contains(shoe.type)) {
+            if (brands.isEmpty || brands.contains(shoe.brand))
+                && (colors.isEmpty || colors.contains(shoe.color))
+                && (priceRanges.isEmpty || isWithinPriceRange(shoe: shoe))
+                && (types.isEmpty || types.contains(shoe.type)) {
                 dataSource.append(shoe)
             }
         }
@@ -65,8 +65,8 @@ class ProductListCollectionViewController: UICollectionViewController, UICollect
     
     func isWithinPriceRange(shoe: Shoe) -> Bool {
         for priceRange in priceRanges {
-            if (priceRange.values.minPrice >=  shoe.currentPriceValue
-                || shoe.currentPriceValue <=  priceRange.values.maxPrice) {
+            if (priceRange.values.minPrice <=  shoe.currentPriceValue
+                && shoe.currentPriceValue <=  priceRange.values.maxPrice) {
                 return true
             }
         }
@@ -150,7 +150,6 @@ class ProductListCollectionViewController: UICollectionViewController, UICollect
     
     
     @objc func imageTap() {
-        print("test")
         
         let vc = storyboard?.instantiateViewController(withIdentifier: FilterViewController.identifier) as? FilterViewController
         self.navigationController?.pushViewController(vc!, animated: true)
@@ -180,6 +179,8 @@ class ProductListCollectionViewController: UICollectionViewController, UICollect
         let vc = storyboard?.instantiateViewController(withIdentifier: ShoeDetailViewController.identifier) as? ShoeDetailViewController
         let shoe = dataSource[indexPath.row]
         // do something vc
+        vc?.oldPriceValue = shoe.oldPrice
+        vc?.currentPriceValue = shoe.currentPrice
         vc?.shoeName = shoe.name;
         vc?.shoeImage = UIImage(named:shoe.imageName)!
         self.navigationController?.pushViewController(vc!, animated: true)

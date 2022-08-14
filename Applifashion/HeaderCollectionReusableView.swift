@@ -109,7 +109,11 @@ class HeaderCollectionReusableView: UICollectionReusableView {
     
     let dropDownView: UIView = {
         let dropDownView = UIView()
-        dropDownView.frame = CGRect(x: 100, y: 5, width: 70, height: 30)
+        dropDownView.frame = CGRect(x: 100, y: 5, width: 150, height: 30)
+       
+//        image.frame = CGRect(x: -10, y: 10, width: 15, height: 10)
+//        dropDownView.addSubview(image)
+                                        
         return dropDownView
     }()
 
@@ -117,7 +121,12 @@ class HeaderCollectionReusableView: UICollectionReusableView {
         let sortByButton = UIButton()
         sortByButton.setTitle("Sort By", for: .normal)
         sortByButton.setTitleColor(.black, for: .normal)
-        sortByButton.frame = CGRect(x: 10, y: 5, width: 70, height: 30)
+        
+        let configuration = UIImage.SymbolConfiguration(pointSize: 10)
+//        let buttonImage: UIImageView = UIImageView(image: UIImage(systemName: "chevron.down", withConfiguration: configuration)?.withTintColor(.black, renderingMode: .alwaysOriginal))
+                                             
+        sortByButton.setImage(UIImage(systemName: "chevron.down", withConfiguration: configuration)?.withTintColor(.black, renderingMode: .alwaysOriginal), for: .normal)
+        sortByButton.frame = CGRect(x: 10, y: 5, width: 100, height: 30)
         sortByButton.addTarget(self, action: #selector(showSortByOptions), for: .touchUpInside)
 
         return sortByButton

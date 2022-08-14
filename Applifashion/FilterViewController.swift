@@ -81,91 +81,94 @@ class FilterViewController: UIViewController {
            var priceRanges = [PriceRange]()
            var types = [ShoeType]()
     
-        if soccerTypeButton.isEnabled {
+        if soccerTypeButton.isSelected {
             types.append(ShoeType.Soccer)
         }
         
-        if basketballTypeButton.isEnabled {
+        if basketballTypeButton.isSelected {
             types.append(ShoeType.Basketball)
         }
         
-        if runningTypeButton.isEnabled {
+        if runningTypeButton.isSelected {
             types.append(ShoeType.Running)
         }
         
-        if trainingTypeButton.isEnabled {
+        if trainingTypeButton.isSelected {
             types.append(ShoeType.Training)
         }
         
         
-        if blackColorButton.isEnabled {
+        if blackColorButton.isSelected {
             colors.append(Color.Black)
         }
         
-        if whiteColorButton.isEnabled {
+        if whiteColorButton.isSelected {
             colors.append(Color.White)
         }
         
-        if blueColorButton.isEnabled {
+        if blueColorButton.isSelected {
             colors.append(Color.Blue)
         }
         
-        if yellowColorButton.isEnabled {
+        if yellowColorButton.isSelected {
             colors.append(Color.Yellow)
         }
         
-        if greenColorButton.isEnabled {
+        if greenColorButton.isSelected {
             colors.append(Color.Green)
         }
         
         
-        if abibasBrandButton.isEnabled {
+        if abibasBrandButton.isSelected {
             brands.append(Brand.Abibas)
         }
         
-        if mykeyBrandButton.isEnabled {
+        if mykeyBrandButton.isSelected {
             brands.append(Brand.Mykey)
         }
         
-        if bansBrandButton.isEnabled {
+        if bansBrandButton.isSelected {
             brands.append(Brand.Bans)
         }
         
-        if overArmoudBrandButton.isEnabled {
+        if overArmoudBrandButton.isSelected {
             brands.append(Brand.OverArmour)
         }
         
-        if imbalanceBrandButton.isEnabled {
+        if imbalanceBrandButton.isSelected {
             brands.append(Brand.ImBalance)
         }
         
         
-        if upToFiftyButton.isEnabled {
+        if upToFiftyButton.isSelected {
             priceRanges.append(PriceRange.UpTo50)
         }
         
-        if upTo100Button.isEnabled {
+        if upTo100Button.isSelected {
             priceRanges.append(PriceRange.UpTo100)
         }
         
-        if upTo150Button.isEnabled {
+        if upTo150Button.isSelected {
             priceRanges.append(PriceRange.Upto150)
         }
-        if upTo500Button.isEnabled {
+        if upTo500Button.isSelected {
             priceRanges.append(PriceRange.UpTo500)
         }
         
         
+//        let viewController = storyboard.instantiateViewController(withIdentifier: "<YOUR ROOT CONTROLLER>")
         
         let vc = storyboard?.instantiateViewController(withIdentifier: ProductListCollectionViewController.identifier) as? ProductListCollectionViewController
-        
+
         // do something vc
         vc?.brands = brands;
         vc?.colors = colors;
         vc?.priceRanges = priceRanges;
         vc?.types = types;
-        self.navigationController?.pushViewController(vc!, animated: true)
-        
+        self.navigationController?.setViewControllers([vc!], animated:true)
+
+//        self.navigationController?.pushViewController(vc!, animated: true)
+//        self.navigationController?.popToRootViewController(animated: true)
         
         
     }
