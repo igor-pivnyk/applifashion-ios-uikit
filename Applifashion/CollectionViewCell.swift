@@ -28,14 +28,11 @@ class CollectionViewCell: UICollectionViewCell {
             self.oldPrice.isHidden = true
             self.oneDayLeft.isHidden = true
             self.discount.isHidden = true
-
-//            self.oldPrice.removeFromSuperview()
-//            self.currentPrice.frame.origin = CGPoint(x: self.currentPrice.frame.width / 2, y: self.currentPrice.frame.origin.y)
-            
             self.currentPrice.textAlignment = .center
-         
-
         } else {
+            self.oldPrice.isHidden = false
+            self.oneDayLeft.isHidden = false
+            self.discount.isHidden = false
             let attributeString: NSMutableAttributedString = NSMutableAttributedString(string: oldPrice)
                 attributeString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: 2, range: NSRange(location: 0, length: attributeString.length))
             self.oldPrice.attributedText = attributeString

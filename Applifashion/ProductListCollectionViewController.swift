@@ -154,25 +154,6 @@ class ProductListCollectionViewController: UICollectionViewController, UICollect
         let vc = storyboard?.instantiateViewController(withIdentifier: FilterViewController.identifier) as? FilterViewController
         self.navigationController?.pushViewController(vc!, animated: true)
         
-//
-//        let storyboard = UIStoryboard(name: "Main",  bundle: nil)
-//        let aaaVC = storyboard.instantiateViewController(withIdentifier: FilterController.identifier) as! FilterController
-//           self.navigationController?.pushViewController(aaaVC, animated: true)
-        
-        
-//        self.present(FilterController())
-//           // or push to the navigation stack
-//           self.navigationController?.push(FilterController())
-//
-//        let vc = self.storyboard?.instantiateViewController(withIdentifier: FilterController.identifier) as? FilterController
-//
-//        self.navigationController?.pushViewController(vc!, animated: true)
-//
-//        // present modally
-//        self.present(FilterController())
-//        // or push to the navigation stack
-//        self.navigationController?.push(FilterController())
-//
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
