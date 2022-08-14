@@ -10,6 +10,7 @@ import UIKit
 class FilterViewController: UIViewController {
     static let identifier = "FilterViewController"
     
+    @IBOutlet weak var scrollView: UIScrollView!
     // Types
     @IBOutlet weak var soccerTypeButton: UIButton!
     
@@ -60,9 +61,7 @@ class FilterViewController: UIViewController {
         setColorButtons()
         setBrandButtons()
         setPriceButtons()
-        
-        
-        
+
         filterButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
         resetButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
 

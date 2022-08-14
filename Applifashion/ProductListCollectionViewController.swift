@@ -104,7 +104,7 @@ class ProductListCollectionViewController: UICollectionViewController, UICollect
         var cell = UICollectionViewCell()
         
         if let shoeCell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as? CollectionViewCell {
-            var shoe: Shoe = dataSource[indexPath.row]
+            let shoe: Shoe = dataSource[indexPath.row]
             shoeCell.configure(with: shoe.name, with: shoe.currentPrice, with: shoe.oldPrice, with:  UIImage(named:shoe.imageName)!)
             
             cell = shoeCell
@@ -126,7 +126,7 @@ class ProductListCollectionViewController: UICollectionViewController, UICollect
             let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCollectionReusableView.identifier, for: indexPath) as! HeaderCollectionReusableView
             
             header.configure()
-            
+            filterButton.frame = CGRect(x: self.view.frame.width - 50, y: 5, width: 30, height: 30)
             header.addSubview(filterButton)
             return header
 
@@ -141,7 +141,8 @@ class ProductListCollectionViewController: UICollectionViewController, UICollect
 //        filterButton.backgroundColor = .red
 //        filterButton.setTitle("Sort By", for: .normal)
 //        sortByButton.setTitleColor(.black, for: .normal)
-        filterButton.frame = CGRect(x: 380, y: 5, width: 70, height: 30)
+        
+
         filterButton.addTarget(self, action: #selector(imageTap), for: .touchUpInside)
 
         return filterButton
@@ -182,7 +183,12 @@ class ProductListCollectionViewController: UICollectionViewController, UICollect
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let flowayout = collectionViewLayout as? UICollectionViewFlowLayout
         let space: CGFloat = (flowayout?.minimumInteritemSpacing ?? 0.0) + (flowayout?.sectionInset.left ?? 0.0) + (flowayout?.sectionInset.right ?? 0.0)
-        let size:CGFloat = (collectionView.frame.size.width - space) / 2.0
+        var numberOfColumns = 2.0
+        if UIDevice.current.orientation.isLandscape {
+            numberOfColumns = 3.0
+        }
+        let size:CGFloat = (collectionView.frame.size.width - space) / numberOfColumns
+
         
         return CGSize(width: size, height: size)
     }

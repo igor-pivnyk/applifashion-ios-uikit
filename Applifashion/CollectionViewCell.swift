@@ -33,6 +33,8 @@ class CollectionViewCell: UICollectionViewCell {
             self.oldPrice.isHidden = false
             self.oneDayLeft.isHidden = false
             self.discount.isHidden = false
+            self.currentPrice.textAlignment = .left
+
             let attributeString: NSMutableAttributedString = NSMutableAttributedString(string: oldPrice)
                 attributeString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: 2, range: NSRange(location: 0, length: attributeString.length))
             self.oldPrice.attributedText = attributeString

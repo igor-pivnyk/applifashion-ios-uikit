@@ -34,7 +34,8 @@ class HeaderCollectionReusableView: UICollectionReusableView {
 //        filterView.isUserInteractionEnabled = true
 //        filterView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(imageTap)))
 //
-        filterView.frame = CGRect(x: 380, y: 5, width: 30, height: 30)
+        
+
         return filterView
     }()
 //    
@@ -165,8 +166,19 @@ class HeaderCollectionReusableView: UICollectionReusableView {
 
         addSubview(sortByButton)
         addSubview(dropDownView)
+        filter.frame = CGRect(x: self.frame.width - 50, y: 5, width: 30, height: 30)
 
-
+//
+//        if UIDevice.current.orientation.isLandscape {
+//
+//            print(self.frame.width)
+//            filter.frame = CGRect(x: self.frame.width - 50, y: 5, width: 30, height: 30)
+//
+//        } else {
+//            filter.frame = CGRect(x: self.frame.width - 50, y: 5, width: 30, height: 30)
+//
+//        }
+        
         addSubview(filter)
 
 

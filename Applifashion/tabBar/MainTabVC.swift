@@ -19,7 +19,7 @@ class MainTabVC: UITabBarController, UITabBarControllerDelegate {
 //    }
     func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
             let selectedIndex = tabBarController.viewControllers?.firstIndex(of: viewController)!
-            if selectedIndex == 1 || selectedIndex == 2 || selectedIndex == 3 {
+            if  selectedIndex == 2 || selectedIndex == 3 {
                 //Do anything.
                 return false
             }
