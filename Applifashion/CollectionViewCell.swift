@@ -38,15 +38,7 @@ class CollectionViewCell: UICollectionViewCell {
             let attributeString: NSMutableAttributedString = NSMutableAttributedString(string: oldPrice)
                 attributeString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: 2, range: NSRange(location: 0, length: attributeString.length))
             self.oldPrice.attributedText = attributeString
-
-            
-            
-            
-//            self.oldPrice.text = oldPrice
         }
         
-//        self.shoeImage.image = 
-
-    
     }
 }

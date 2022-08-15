@@ -101,8 +101,6 @@ class FooterCollectionReusableView: UICollectionReusableView {
         let image = UIImage(systemName: "envelope", withConfiguration: configuration)?.withTintColor(.white, renderingMode: .alwaysOriginal)
         
         let imageView = UIImageView(image: image!)
-        
-        
 
         let stackview = UIStackView()
               stackview.axis = .horizontal
@@ -134,14 +132,13 @@ class FooterCollectionReusableView: UICollectionReusableView {
     let rightColumn: UIStackView = {
         
         let stackview = UIStackView()
-              stackview.axis = .vertical
+        stackview.axis = .vertical
         
         stackview.spacing = UIStackView.spacingUseSystem
         stackview.isLayoutMarginsRelativeArrangement = true
-stackview.layoutMargins = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 0)
-//              stackview.spacing = 10
-//              stackview.translatesAutoresizingMaskIntoConstraints = false
-              stackview.addArrangedSubview(contactsHeading)
+        stackview.layoutMargins = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 0)
+
+        stackview.addArrangedSubview(contactsHeading)
         stackview.addArrangedSubview(addressFull)
         stackview.addArrangedSubview(emailFull)
         stackview.addArrangedSubview(UIView())
@@ -157,30 +154,16 @@ stackview.layoutMargins = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 0)
     public func configure() {
         backgroundColor = UIColor(red: 25/255.0, green: 33/255.0, blue: 51/255.0, alpha: 1)
         let stackview = UIStackView()
-              stackview.axis = .horizontal
+        stackview.axis = .horizontal
         
-        //              stackview.spacing = 10
-                stackview.spacing = UIStackView.spacingUseSystem
-                stackview.isLayoutMarginsRelativeArrangement = true
+        stackview.spacing = UIStackView.spacingUseSystem
+        stackview.isLayoutMarginsRelativeArrangement = true
         stackview.layoutMargins = UIEdgeInsets(top: 10, left: 20, bottom: 20, right: 20)
 
-
-              stackview.translatesAutoresizingMaskIntoConstraints = false
-              stackview.addArrangedSubview(leftColumn)
-//              secondLabel.widthAnchor.constraint(equalToConstant: 100).isActive = true
-//              secondLabel.heightAnchor.constraint(equalToConstant: 100).isActive = true
-
-              stackview.addArrangedSubview(rightColumn)
-//              thirdLabel.widthAnchor.constraint(equalToConstant: 100).isActive = true
-//              thirdLabel.heightAnchor.constraint(equalToConstant: 100).isActive = true
-
-              addSubview(stackview)
-//        stackview.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-//              stackview.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-////        addSubview(test)
-//        addSubview(aboutUs)
-
-        
+        stackview.translatesAutoresizingMaskIntoConstraints = false
+        stackview.addArrangedSubview(leftColumn)
+        stackview.addArrangedSubview(rightColumn)
+        addSubview(stackview)
     }
 
     static func createPlainLabel(text: String, alignment: NSTextAlignment) -> UILabel {

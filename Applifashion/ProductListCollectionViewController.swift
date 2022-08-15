@@ -16,8 +16,6 @@ class ProductListCollectionViewController: UICollectionViewController, UICollect
     var priceRanges = [PriceRange]()
     var types = [ShoeType]()
 
-
-
     var dataSource: [Shoe] = [Shoe]()
     
     let originalShoes: [Shoe] = [
@@ -58,8 +56,6 @@ class ProductListCollectionViewController: UICollectionViewController, UICollect
                 dataSource.append(shoe)
             }
         }
-//
-//        originalShoes.forEach(<#T##body: (Shoe) throws -> Void##(Shoe) throws -> Void#>)
     }
     
     
@@ -79,8 +75,6 @@ class ProductListCollectionViewController: UICollectionViewController, UICollect
         
         filterShoes()
         
-//        let layout = UICollectionViewFlowLayout()
-//        layout.sectionInset = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
               layout.sectionInset = UIEdgeInsets(top: 20, left: 0, bottom: 10, right: 0)
               layout.minimumInteritemSpacing = 0
@@ -92,11 +86,7 @@ class ProductListCollectionViewController: UICollectionViewController, UICollect
 
     }
     
-//    func filterShoes
-    
-    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
         return dataSource.count
     }
     
@@ -138,10 +128,6 @@ class ProductListCollectionViewController: UICollectionViewController, UICollect
     
     private let filterButton: UIButton = {
         let filterButton = UIButton()
-//        filterButton.backgroundColor = .red
-//        filterButton.setTitle("Sort By", for: .normal)
-//        sortByButton.setTitleColor(.black, for: .normal)
-        
 
         filterButton.addTarget(self, action: #selector(imageTap), for: .touchUpInside)
 
@@ -192,6 +178,5 @@ class ProductListCollectionViewController: UICollectionViewController, UICollect
         
         return CGSize(width: size, height: size)
     }
-    
 
 }

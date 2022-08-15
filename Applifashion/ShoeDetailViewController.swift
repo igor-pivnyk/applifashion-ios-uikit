@@ -45,7 +45,6 @@ class ShoeDetailViewController: UIViewController {
                 attributeString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: 2, range: NSRange(location: 0, length: attributeString.length))
             self.oldPrice.attributedText = attributeString
 
-
         }
         
         handleQuantity()
@@ -82,10 +81,6 @@ class ShoeDetailViewController: UIViewController {
         }
         return currentQuantity!
     }
-    
-    
-
-
 }
 
 

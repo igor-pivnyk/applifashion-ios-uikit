@@ -153,9 +153,7 @@ class FilterViewController: UIViewController {
         if upTo500Button.isSelected {
             priceRanges.append(PriceRange.UpTo500)
         }
-        
-        
-//        let viewController = storyboard.instantiateViewController(withIdentifier: "<YOUR ROOT CONTROLLER>")
+    
         
         let vc = storyboard?.instantiateViewController(withIdentifier: ProductListCollectionViewController.identifier) as? ProductListCollectionViewController
 
@@ -166,9 +164,6 @@ class FilterViewController: UIViewController {
         vc?.types = types;
         self.navigationController?.setViewControllers([vc!], animated:true)
 
-//        self.navigationController?.pushViewController(vc!, animated: true)
-//        self.navigationController?.popToRootViewController(animated: true)
-        
         
     }
     
@@ -259,27 +254,8 @@ class FilterViewController: UIViewController {
                     }, completion: nil)
         
     }
-        
     }
     
-    
-    
-//        soccerTypeButton?.setImage(UIImage(named:"square"), for: .normal)
-//        soccerTypeButton?.setImage(UIImage(named:"checkmark"), for: .selected)
-//
-//
-//          }
-
-//          override func didReceiveMemoryWarning() {
-//              super.didReceiveMemoryWarning()
-//              // Dispose of any resources that can be recreated.
-//          }
-//          
-//           //MARK:- checkMarkTapped
-//          @IBAction func checkMarkTapped(_ sender: UIButton) {
-//              
-//          }
-
     /*
     // MARK: - Navigation
 
