@@ -9,3 +9,4 @@
 
 *Requirements:*
 * The best phone emulator is iPhone 13 Pro Max, but you can attempt to use others
+* The best tablet emulator is iPad, 9th Generation, but you can attempt to use others
