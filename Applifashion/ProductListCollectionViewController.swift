@@ -39,23 +39,7 @@ class ProductListCollectionViewController: UICollectionViewController, UICollect
     
     func filterShoes() {
         
-        
-        if brands.isEmpty
-            && colors.isEmpty
-            && priceRanges.isEmpty
-            && types.isEmpty {
-            dataSource = originalShoes.map { $0.copy() as! Shoe }
-        }
-        
-        for shoe in originalShoes {
-            
-            if (brands.isEmpty || brands.contains(shoe.brand))
-                && (colors.isEmpty || colors.contains(shoe.color))
-                && (priceRanges.isEmpty || isWithinPriceRange(shoe: shoe))
-                && (types.isEmpty || types.contains(shoe.type)) {
-                dataSource.append(shoe)
-            }
-        }
+        dataSource = originalShoes.map { $0.copy() as! Shoe }
     }
     
     
@@ -76,7 +60,7 @@ class ProductListCollectionViewController: UICollectionViewController, UICollect
         filterShoes()
         
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-              layout.sectionInset = UIEdgeInsets(top: 20, left: 0, bottom: 10, right: 0)
+              layout.sectionInset = UIEdgeInsets(top: 28, left: 0, bottom: 10, right: 0)
               layout.minimumInteritemSpacing = 0
               layout.minimumLineSpacing = 0
               collectionView!.collectionViewLayout = layout
@@ -118,6 +102,9 @@ class ProductListCollectionViewController: UICollectionViewController, UICollect
             header.configure()
             filterButton.frame = CGRect(x: self.view.frame.width - 50, y: 5, width: 30, height: 30)
             header.addSubview(filterButton)
+            let extraLine = UIView(frame: CGRect(x: 0, y: 40, width: UIScreen.main.bounds.width, height: 8))
+            extraLine.backgroundColor = .systemGray
+            header.addSubview(extraLine)
             return header
 
         }
