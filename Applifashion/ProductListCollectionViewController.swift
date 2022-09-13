@@ -37,6 +37,12 @@ class ProductListCollectionViewController: UICollectionViewController, UICollect
         
     ]
     
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        collectionView?.collectionViewLayout.invalidateLayout()
+        collectionView?.reloadData()
+
+    }
+    
     func filterShoes() {
         
         
