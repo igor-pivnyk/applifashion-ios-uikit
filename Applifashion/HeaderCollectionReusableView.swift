@@ -16,7 +16,7 @@ class HeaderCollectionReusableView: UICollectionReusableView {
         let filterImage = UIImage(named: "filter.png")
      
         let filterView = UIImageView(image: filterImage!)
-        
+        filterView.accessibilityIdentifier = "filterImage"
         return filterView
     }()
     
@@ -31,6 +31,7 @@ class HeaderCollectionReusableView: UICollectionReusableView {
         ]
         
         menu.frame = CGRect(x: 10, y: 5, width: 70, height: 30)
+        menu.accessibilityIdentifier = "menuDropDown"
         return menu
     }()
     
@@ -39,13 +40,14 @@ class HeaderCollectionReusableView: UICollectionReusableView {
         label.text = "  Sort By"
         label.textAlignment = .left
         label.textColor = .black
+        label.accessibilityIdentifier = "sortByLabel"
         return label
     }()
     
     let dropDownView: UIView = {
         let dropDownView = UIView()
         dropDownView.frame = CGRect(x: 100, y: 5, width: 150, height: 30)
-           
+        dropDownView.accessibilityIdentifier = "menuDropDownView"
         return dropDownView
     }()
 
@@ -59,7 +61,7 @@ class HeaderCollectionReusableView: UICollectionReusableView {
         sortByButton.setImage(UIImage(systemName: "chevron.down", withConfiguration: configuration)?.withTintColor(.black, renderingMode: .alwaysOriginal), for: .normal)
         sortByButton.frame = CGRect(x: 10, y: 5, width: 100, height: 30)
         sortByButton.addTarget(self, action: #selector(showSortByOptions), for: .touchUpInside)
-
+        sortByButton.accessibilityIdentifier = "sortByButton"
         return sortByButton
     }()
     
