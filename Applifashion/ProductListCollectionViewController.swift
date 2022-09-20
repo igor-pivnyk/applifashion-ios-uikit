@@ -136,7 +136,7 @@ class ProductListCollectionViewController: UICollectionViewController, UICollect
         let filterButton = UIButton()
 
         filterButton.addTarget(self, action: #selector(imageTap), for: .touchUpInside)
-
+        filterButton.accessibilityIdentifier = "filterButton"
         return filterButton
     }()
     
