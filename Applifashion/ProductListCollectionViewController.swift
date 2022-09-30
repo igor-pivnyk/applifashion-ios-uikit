@@ -105,6 +105,11 @@ class ProductListCollectionViewController: UICollectionViewController, UICollect
     }
     
     
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        collectionView?.collectionViewLayout.invalidateLayout()
+        collectionView?.reloadData()
+
+    }
     
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         if kind == UICollectionView.elementKindSectionFooter {
@@ -134,6 +139,7 @@ class ProductListCollectionViewController: UICollectionViewController, UICollect
         let filterButton = UIButton()
 
         filterButton.addTarget(self, action: #selector(imageTap), for: .touchUpInside)
+        filterButton.accessibilityIdentifier = "filterButton"
 
         return filterButton
     }()
