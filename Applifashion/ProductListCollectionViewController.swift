@@ -54,6 +54,12 @@ class ProductListCollectionViewController: UICollectionViewController, UICollect
     }
 
     
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        collectionView?.collectionViewLayout.invalidateLayout()
+        collectionView?.reloadData()
+
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -117,6 +123,7 @@ class ProductListCollectionViewController: UICollectionViewController, UICollect
         let filterButton = UIButton()
 
         filterButton.addTarget(self, action: #selector(imageTap), for: .touchUpInside)
+        filterButton.accessibilityIdentifier = "filterButton"
 
         return filterButton
     }()

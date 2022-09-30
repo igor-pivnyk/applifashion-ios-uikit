@@ -13,44 +13,42 @@ class FooterCollectionReusableView: UICollectionReusableView {
     
 
 
-  
     // First column
-
     
     static let quickLinks: UILabel = {
-        let quickLinks = createPlainLabel(text: "Quick Links", alignment: .left)
+        let quickLinks = createPlainLabel(text: "Quick Links", id: "quickLinksHeadingFooter", alignment: .left)
         quickLinks.font = UIFont.boldSystemFont(ofSize: 20.0)
         return quickLinks
     }()
     
     static let aboutUs: UILabel = {
-        return createPlainLabel(text: "About Us", alignment: .left)
+        return createPlainLabel(text: "About Us", id: "aboutUsFooter", alignment: .left)
     }()
     
     static let faq: UILabel = {
-        return createPlainLabel(text: "FAQ", alignment: .left)
+        return createPlainLabel(text: "FAQ", id: "faqFooter", alignment: .left)
     }()
     
     static let help: UILabel = {
-        return createPlainLabel(text: "Help", alignment: .left)
+        return createPlainLabel(text: "Help", id: "helpFooter", alignment: .left)
     }()
     
     static let myAccount: UILabel = {
-        return createPlainLabel(text: "My Account", alignment: .left)
+        return createPlainLabel(text: "My Account", id: "myAccountFooter", alignment: .left)
     }()
     
     static let blog: UILabel = {
-        return createPlainLabel(text: "Blog", alignment: .left)
+        return createPlainLabel(text: "Blog", id: "blogFooter", alignment: .left)
     }()
     
     static let contacts: UILabel = {
-        return createPlainLabel(text: "Contacts", alignment: .left)
+        return createPlainLabel(text: "Contacts", id: "contactsFooter", alignment: .left)
     }()
     
     
     // Second column
     static let contactsHeading: UILabel = {
-        let quickLinks = createPlainLabel(text: "Contacts", alignment: .right)
+        let quickLinks = createPlainLabel(text: "Contacts", id: "contactsHeadingFooter", alignment: .right)
         quickLinks.font = UIFont.boldSystemFont(ofSize: 20.0)
         return quickLinks
     }()
@@ -90,8 +88,7 @@ class FooterCollectionReusableView: UICollectionReusableView {
     }()
     
     static let email: UILabel = {
-        return createPlainLabel(text: "srd@applitools.com", alignment: .right)
-
+        return createPlainLabel(text: "srd@applitools.com", id: "emailFooter", alignment: .right)
     }()
     
     static let emailFull: UIStackView = {
@@ -166,10 +163,11 @@ class FooterCollectionReusableView: UICollectionReusableView {
         addSubview(stackview)
     }
 
-    static func createPlainLabel(text: String, alignment: NSTextAlignment) -> UILabel {
+    static func createPlainLabel(text: String, id: String, alignment: NSTextAlignment) -> UILabel {
         let label = UILabel()
         label.text = text
         label.textColor = .white
+        label.accessibilityIdentifier = id
         return label
     }
 }
