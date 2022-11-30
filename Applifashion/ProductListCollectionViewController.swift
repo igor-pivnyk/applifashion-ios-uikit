@@ -40,7 +40,7 @@ class ProductListCollectionViewController: UICollectionViewController, UICollect
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         collectionView?.collectionViewLayout.invalidateLayout()
         collectionView?.reloadData()
-
+        super.viewWillTransition(to: size, with: coordinator)
     }
     
     func filterShoes() {
@@ -132,7 +132,7 @@ class ProductListCollectionViewController: UICollectionViewController, UICollect
     }
     
     
-    private let filterButton: UIButton = {
+    private lazy var filterButton: UIButton = {
         let filterButton = UIButton()
 
         filterButton.addTarget(self, action: #selector(imageTap), for: .touchUpInside)
