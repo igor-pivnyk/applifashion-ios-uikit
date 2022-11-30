@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -31,64 +32,110 @@
                                     <rect key="frame" x="0.0" y="0.0" width="200" height="251"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="discount" id="Te9-4O-SfQ">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="discount" translatesAutoresizingMaskIntoConstraints="NO" id="Te9-4O-SfQ">
                                             <rect key="frame" x="8" y="0.0" width="32" height="27"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <accessibility key="accessibilityConfiguration" identifier="discountLogoCell"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="27" id="2vX-Uc-uCn"/>
+                                                <constraint firstAttribute="width" constant="32" id="RyM-pt-F7a"/>
+                                            </constraints>
                                         </imageView>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.left.arrow.right" catalog="system" id="bf3-7P-nX5">
-                                            <rect key="frame" x="82" y="216" width="31" height="29"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="tintColor" systemColor="labelColor"/>
-                                            <accessibility key="accessibilityConfiguration" identifier="randomLogoCell"/>
-                                        </imageView>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="one_day_left" translatesAutoresizingMaskIntoConstraints="NO" id="br1-g4-iQ6">
-                                            <rect key="frame" x="48" y="121" width="89" height="72"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <accessibility key="accessibilityConfiguration" identifier="dayLeftCell"/>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$100.00" textAlignment="natural" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgq-bp-Npn" userLabel="Current Price">
-                                            <rect key="frame" x="28" y="194" width="126" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <accessibility key="accessibilityConfiguration" identifier="currentPriceValue"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="black_shoes" translatesAutoresizingMaskIntoConstraints="NO" id="47S-Va-QeG">
-                                            <rect key="frame" x="4" y="19" width="192" height="118"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <accessibility key="accessibilityConfiguration" identifier="shoeImageCell"/>
-                                        </imageView>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" catalog="system" id="CSO-C0-6lB">
-                                            <rect key="frame" x="39" y="215.5" width="29" height="31"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="tintColor" systemColor="labelColor"/>
-                                            <accessibility key="accessibilityConfiguration" identifier="heartLogoCell"/>
-                                        </imageView>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cart" catalog="system" id="G3s-Al-qDb">
-                                            <rect key="frame" x="119" y="216.5" width="35" height="31"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="tintColor" systemColor="labelColor"/>
-                                            <accessibility key="accessibilityConfiguration" identifier="cartLogoCell"/>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Shoe Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g0h-4v-4ud" userLabel="Shoe Name Label">
-                                            <rect key="frame" x="28" y="172" width="128" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="ugG-OV-iXZ">
+                                            <rect key="frame" x="34" y="200" width="132" height="18"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$100.00" textAlignment="natural" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgq-bp-Npn" userLabel="Current Price">
+                                                    <rect key="frame" x="0.0" y="0.0" width="62.333333333333336" height="18"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="currentPriceValue"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$50.00" textAlignment="natural" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eS4-1e-gPh" userLabel="Old Price">
+                                                    <rect key="frame" x="77.333333333333329" y="0.0" width="54.666666666666671" height="18"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="oldPriceCell"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="18" id="1qV-Om-2Wt"/>
+                                                <constraint firstAttribute="width" constant="132" id="qlJ-8R-Ect"/>
+                                            </constraints>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="BEu-sf-6j7">
+                                            <rect key="frame" x="0.0" y="19" width="200" height="147"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="black_shoes" translatesAutoresizingMaskIntoConstraints="NO" id="47S-Va-QeG">
+                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="122"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="shoeImageCell"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="05k-63-Sqa"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="one_day_left" translatesAutoresizingMaskIntoConstraints="NO" id="br1-g4-iQ6">
+                                                    <rect key="frame" x="0.0" y="122" width="200" height="25"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="dayLeftCell"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="25" id="kI8-Yc-Mpb"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="130" id="LPQ-xV-Fab"/>
+                                            </constraints>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="byT-Ci-PMM">
+                                            <rect key="frame" x="50" y="226" width="100" height="25"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" catalog="system" id="CSO-C0-6lB">
+                                                    <rect key="frame" x="0.0" y="1.9999999999999982" width="28" height="22"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="tintColor" systemColor="labelColor"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="heartLogoCell"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.left.arrow.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="bf3-7P-nX5">
+                                                    <rect key="frame" x="36" y="-0.3333333333333357" width="28" height="26.333333333333336"/>
+                                                    <color key="tintColor" systemColor="labelColor"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="randomLogoCell"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cart" catalog="system" id="G3s-Al-qDb">
+                                                    <rect key="frame" x="72" y="1.6666666666666661" width="28" height="23"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="tintColor" systemColor="labelColor"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="cartLogoCell"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="100" id="9nR-M2-c6H"/>
+                                                <constraint firstAttribute="height" constant="25" id="Sza-jc-obd"/>
+                                            </constraints>
+                                        </stackView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shoe Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g0h-4v-4ud" userLabel="Shoe Name Label">
+                                            <rect key="frame" x="56" y="174" width="88" height="18"/>
                                             <accessibility key="accessibilityConfiguration" identifier="shoeNameCell"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="18" id="fD4-Ss-qLv"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$50.00" textAlignment="natural" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eS4-1e-gPh" userLabel="Old Price">
-                                            <rect key="frame" x="109" y="194" width="73" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <accessibility key="accessibilityConfiguration" identifier="oldPriceCell"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="byT-Ci-PMM" secondAttribute="bottom" id="2M8-ei-Wq7"/>
+                                        <constraint firstItem="BEu-sf-6j7" firstAttribute="top" secondItem="Te9-4O-SfQ" secondAttribute="bottom" constant="-8" id="2Qt-vm-JLo"/>
+                                        <constraint firstItem="Te9-4O-SfQ" firstAttribute="top" secondItem="Zx1-qL-hef" secondAttribute="top" id="5e2-cP-li3"/>
+                                        <constraint firstItem="BEu-sf-6j7" firstAttribute="leading" secondItem="Zx1-qL-hef" secondAttribute="leading" id="A5K-TA-0KQ"/>
+                                        <constraint firstItem="ugG-OV-iXZ" firstAttribute="centerX" secondItem="Zx1-qL-hef" secondAttribute="centerX" id="b84-T4-rku"/>
+                                        <constraint firstAttribute="trailing" secondItem="BEu-sf-6j7" secondAttribute="trailing" id="gpo-U7-NP4"/>
+                                        <constraint firstItem="g0h-4v-4ud" firstAttribute="centerX" secondItem="Zx1-qL-hef" secondAttribute="centerX" id="hBY-MT-zqt"/>
+                                        <constraint firstItem="byT-Ci-PMM" firstAttribute="top" secondItem="ugG-OV-iXZ" secondAttribute="bottom" constant="8" id="rIs-Kd-Yoy"/>
+                                        <constraint firstItem="g0h-4v-4ud" firstAttribute="top" secondItem="BEu-sf-6j7" secondAttribute="bottom" constant="8" id="wdo-TR-o22"/>
+                                        <constraint firstItem="byT-Ci-PMM" firstAttribute="centerX" secondItem="Zx1-qL-hef" secondAttribute="centerX" id="wi6-B8-ONa"/>
+                                        <constraint firstItem="Te9-4O-SfQ" firstAttribute="leading" secondItem="Zx1-qL-hef" secondAttribute="leading" constant="8" id="xzp-u5-qT7"/>
+                                        <constraint firstItem="ugG-OV-iXZ" firstAttribute="top" secondItem="g0h-4v-4ud" secondAttribute="bottom" constant="8" id="yDP-8T-X2G"/>
+                                    </constraints>
                                 </collectionViewCellContentView>
                                 <size key="customSize" width="200" height="251"/>
                                 <connections>
